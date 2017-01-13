@@ -8,6 +8,6 @@ public interface ProgressInterfaceEduardo extends Visible {
 	
 	public void setRound(int round);
 	
-	public void setSequenceSize(int seqSize);
+	public void setSequenceLength(int size);
 
 }

@@ -40,7 +40,7 @@ public class SimonScreenEduardo extends ClickableScreen implements Runnable {
 		roundNumber++;
 		sequence.add(randomMove());
 		progressBox.setRound(roundNumber);
-		progressBox.setSequenceSize(sequence.size());
+		progressBox.setSequenceLength(sequence.size());
 		changeText("Simon's Turn");
 		try {
 			Thread.sleep(1000);
@@ -72,7 +72,6 @@ public class SimonScreenEduardo extends ClickableScreen implements Runnable {
 			try {
 				Thread.sleep(sleepTime);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -83,6 +82,7 @@ public class SimonScreenEduardo extends ClickableScreen implements Runnable {
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		addButtons();
 		progressBox = getProgress();
+		buttons = new ButtonInterfaceEduardo[5];
 		label = new TextLabel(130,230,300,40,"Let's play Simon!");
 		sequence = new ArrayList<MoveInterfaceEduardo>();
 		//add 2 moves to start
@@ -106,13 +106,11 @@ public class SimonScreenEduardo extends ClickableScreen implements Runnable {
 	}
 
 	private MoveInterfaceEduardo getMove(ButtonInterfaceEduardo b) {
-		// placeholder until Move is completed
-		return null;
+		return new MoveSyed(b);
 	}
 
 	private ProgressInterfaceEduardo getProgress() {
-		//Placeholder until partner completes progressBox
-		return null;
+		return new ProgressSyed();
 	}
 	
 	
@@ -158,8 +156,7 @@ public class SimonScreenEduardo extends ClickableScreen implements Runnable {
 	}
 
 	private ButtonInterfaceEduardo getAButton() {
-		// placeholder for... well, you know the drill
-		return null;
+		return new ButtonSyed();
 	}
 
 }

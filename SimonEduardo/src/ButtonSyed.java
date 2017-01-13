@@ -4,11 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.RenderingHints;
-import java.awt.image.BufferedImage;
-
 import guiPractice.components.Action;
 import guiPractice.components.Component;
-import guiPractice.components.Components;
 
 public class ButtonSyed extends Component implements ButtonInterfaceEduardo {
 

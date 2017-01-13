@@ -6,7 +6,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
 import guiPractice.components.Component;
-import guiPractice.components.Components;
+import guiPractice.components.Component;
 
 public class ProgressSyed extends Component implements ProgressInterfaceEduardo {
 
